@@ -1,0 +1,669 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{noauthor_dart-langlanguage_2026}{misc}{}{}
+      \list{publisher}{1}{%
+        {Dart}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Design of the Dart language}
+      \field{month}{9}
+      \field{note}{original-date: 2018-06-13T22:49:18Z}
+      \field{title}{dart-lang/language}
+      \field{urlday}{28}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/dart-lang/language
+      \endverb
+      \verb{url}
+      \verb https://github.com/dart-lang/language
+      \endverb
+    \endentry
+    \entry{dunfield_bidirectional_2021}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=60889da679127853753f4585e316703b}{%
+           family={Dunfield},
+           familyi={D\bibinitperiod},
+           given={Jana},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0db8fd853ecaf02ae0100d840b9302a3}{%
+           family={Krishnaswami},
+           familyi={K\bibinitperiod},
+           given={Neel},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{f161efb86a0a4b5f891db095bdc39adb}
+      \strng{fullhash}{f161efb86a0a4b5f891db095bdc39adb}
+      \strng{fullhashraw}{f161efb86a0a4b5f891db095bdc39adb}
+      \strng{bibnamehash}{f161efb86a0a4b5f891db095bdc39adb}
+      \strng{authorbibnamehash}{f161efb86a0a4b5f891db095bdc39adb}
+      \strng{authornamehash}{f161efb86a0a4b5f891db095bdc39adb}
+      \strng{authorfullhash}{f161efb86a0a4b5f891db095bdc39adb}
+      \strng{authorfullhashraw}{f161efb86a0a4b5f891db095bdc39adb}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Bidirectional typing combines two modes of typing: type checking, which checks that a program satisfies a known type, and type synthesis, which determines a type from the program. Using checking enables bidirectional typing to support features for which inference is undecidable; using synthesis enables bidirectional typing to avoid the large annotation burden of explicitly typed languages. In addition, bidirectional typing improves error locality. We highlight the design principles that underlie bidirectional type systems, survey the development of bidirectional typing from the prehistoric period before Pierce and Turner’s local type inference to the present day, and provide guidance for future investigations.}
+      \field{issn}{0360-0300}
+      \field{journaltitle}{ACM Computing Surveys (CSUR)}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{Bidirectional {Typing}}
+      \field{urlday}{28}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{volume}{54}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{98:1\bibrangedash 98:38}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1145/3450952
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/blazz1t/Zotero/storage/3QMUAAW2/Dunfield and Krishnaswami - 2021 - Bidirectional Typing.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3450952
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3450952
+      \endverb
+    \endentry
+    \entry{noauthor_analyzer_nodate}{misc}{}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Analyzer plugins allow you to create custom lints, warnings, and IDE quick fixes for your Dart projects}
+      \field{title}{Analyzer plugins}
+      \field{urlday}{28}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{file}
+      \verb Snapshot:/home/blazz1t/Zotero/storage/DXF92CJY/analyzer-plugins.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://dart.dev/tools/analyzer-plugins
+      \endverb
+      \verb{url}
+      \verb https://dart.dev/tools/analyzer-plugins
+      \endverb
+    \endentry
+    \entry{de_moura_z3_2008}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=04ffe79f369bf9f16e299fcf4f98e780}{%
+           family={Moura},
+           familyi={M\bibinitperiod},
+           given={Leonardo},
+           giveni={L\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=99b7b42f13980bae3d14cd2bbc329658}{%
+           family={Bjørner},
+           familyi={B\bibinitperiod},
+           given={Nikolaj},
+           giveni={N\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=8de7988a89f7d44ea8974e52f506814a}{%
+           family={Ramakrishnan},
+           familyi={R\bibinitperiod},
+           given={C.\bibnamedelimi R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=bfbf2493397999fdeb655b820f2a8be8}{%
+           family={Rehof},
+           familyi={R\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{8ed841e87e50b9624f9ae19c1fa525cc}
+      \strng{fullhash}{8ed841e87e50b9624f9ae19c1fa525cc}
+      \strng{fullhashraw}{8ed841e87e50b9624f9ae19c1fa525cc}
+      \strng{bibnamehash}{8ed841e87e50b9624f9ae19c1fa525cc}
+      \strng{authorbibnamehash}{8ed841e87e50b9624f9ae19c1fa525cc}
+      \strng{authornamehash}{8ed841e87e50b9624f9ae19c1fa525cc}
+      \strng{authorfullhash}{8ed841e87e50b9624f9ae19c1fa525cc}
+      \strng{authorfullhashraw}{8ed841e87e50b9624f9ae19c1fa525cc}
+      \strng{editorbibnamehash}{092ab030c89e1a753d537e3ef842116f}
+      \strng{editornamehash}{092ab030c89e1a753d537e3ef842116f}
+      \strng{editorfullhash}{092ab030c89e1a753d537e3ef842116f}
+      \strng{editorfullhashraw}{092ab030c89e1a753d537e3ef842116f}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Satisfiability Modulo Theories (SMT) problem is a decision problem for logical first order formulas with respect to combinations of background theories such as: arithmetic, bit-vectors, arrays, and uninterpreted functions. Z3 is a new and efficient SMT Solver freely available from Microsoft Research. It is used in various software verification and analysis applications.}
+      \field{booktitle}{Tools and {Algorithms} for the {Construction} and {Analysis} of {Systems}}
+      \field{isbn}{978-3-540-78800-3}
+      \field{shorttitle}{Z3}
+      \field{title}{Z3: {An} {Efficient} {SMT} {Solver}}
+      \field{year}{2008}
+      \true{nocite}
+      \field{pages}{337\bibrangedash 340}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1007/978-3-540-78800-3_24
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/blazz1t/Zotero/storage/Z2DI4W3L/de Moura and Bjørner - 2008 - Z3 An Efficient SMT Solver.pdf:application/pdf
+      \endverb
+      \keyw{Bound Model Check,Linear Arithmetic,Predicate Abstraction,Symbolic Execution,Theory Solver}
+    \endentry
+    \entry{lehmann_flux_2023}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=39ff2b6f5ee5f5fdba7398c80afe27fb}{%
+           family={Lehmann},
+           familyi={L\bibinitperiod},
+           given={Nico},
+           giveni={N\bibinitperiod}}}%
+        {{hash=1696a2e66c47dd2b4dcf4abd7a4dadf1}{%
+           family={Geller},
+           familyi={G\bibinitperiod},
+           given={Adam\bibnamedelima T.},
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=b78a377734a44faae5e925c1ce02ae42}{%
+           family={Vazou},
+           familyi={V\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0b731274f4d045521bac73df419287ea}{%
+           family={Jhala},
+           familyi={J\bibinitperiod},
+           given={Ranjit},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{10f0872d2731e9a23b4406c00e5f2b8c}
+      \strng{fullhash}{cce58a9cdf0898b538f3c825310ca7a1}
+      \strng{fullhashraw}{cce58a9cdf0898b538f3c825310ca7a1}
+      \strng{bibnamehash}{cce58a9cdf0898b538f3c825310ca7a1}
+      \strng{authorbibnamehash}{cce58a9cdf0898b538f3c825310ca7a1}
+      \strng{authornamehash}{10f0872d2731e9a23b4406c00e5f2b8c}
+      \strng{authorfullhash}{cce58a9cdf0898b538f3c825310ca7a1}
+      \strng{authorfullhashraw}{cce58a9cdf0898b538f3c825310ca7a1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We introduce Flux, which shows how logical refinements can work hand in glove with Rust's ownership mechanisms to yield ergonomic type-based verification of low-level pointer manipulating programs. First, we design a novel refined type system for Rust that indexes mutable locations, with pure (immutable) values that can appear in refinements, and then exploits Rust's ownership mechanisms to abstract sub-structural reasoning about locations within Rust's polymorphic type constructors, while supporting strong updates. We formalize the crucial dependency upon Rust's strong aliasing guarantees by exploiting the Stacked Borrows aliasing model to prove that "well-borrowed evaluations of well-typed programs do not get stuck". Second, we implement our type system in Flux, a plug-in to the Rust compiler that exploits the factoring of complex invariants into types and refinements to efficiently synthesize loop annotations-including complex quantified invariants describing the contents of containers-via liquid inference. Third, we evaluate Flux with a benchmark suite of vector manipulating programs and parts of a previously verified secure sandboxing library to demonstrate the advantages of refinement types over program logics as implemented in the state-of-the-art Prusti verifier. While Prusti's more expressive program logic can, in general, verify deep functional correctness specifications, for the lightweight but ubiquitous and important verification use-cases covered by our benchmarks, liquid typing makes verification ergonomic by slashing specification lines by a factor of two, verification time by an order of magnitude, and annotation overhead from up to 24\% of code size (average 14\%), to nothing at all.}
+      \field{journaltitle}{Proceedings of the ACM on Programming Languages}
+      \field{month}{6}
+      \field{number}{PLDI}
+      \field{shorttitle}{Flux}
+      \field{title}{Flux: {Liquid} {Types} for {Rust}}
+      \field{urlday}{4}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{volume}{7}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{169:1533\bibrangedash 169:1557}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1145/3591283
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/blazz1t/Zotero/storage/FC8CFE4N/Lehmann et al. - 2023 - Flux Liquid Types for Rust.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3591283
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3591283
+      \endverb
+    \endentry
+    \entry{rondon_liquid_2008}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=a7bedc531bf7138265ca36d32195e483}{%
+           family={Rondon},
+           familyi={R\bibinitperiod},
+           given={Patrick\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=bb87d47d5927acac06c559ef0e54358a}{%
+           family={Kawaguci},
+           familyi={K\bibinitperiod},
+           given={Ming},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0b731274f4d045521bac73df419287ea}{%
+           family={Jhala},
+           familyi={J\bibinitperiod},
+           given={Ranjit},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{11bb484824c1675e527bc5b740b2f85e}
+      \strng{fullhash}{0b0fce80d4545d5465042c56fce06a51}
+      \strng{fullhashraw}{0b0fce80d4545d5465042c56fce06a51}
+      \strng{bibnamehash}{0b0fce80d4545d5465042c56fce06a51}
+      \strng{authorbibnamehash}{0b0fce80d4545d5465042c56fce06a51}
+      \strng{authornamehash}{11bb484824c1675e527bc5b740b2f85e}
+      \strng{authorfullhash}{0b0fce80d4545d5465042c56fce06a51}
+      \strng{authorfullhashraw}{0b0fce80d4545d5465042c56fce06a51}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present Logically Qualified Data Types, abbreviated to Liquid Types, a system that combines Hindley-Milner type inference with Predicate Abstraction to automatically infer dependent types precise enough to prove a variety of safety properties. Liquid types allow programmers to reap many of the benefits of dependent types, namely static verification of critical properties and the elimination of expensive run-time checks, without the heavy price of manual annotation. We have implemented liquid type inference in DSOLVE, which takes as input an OCAML program and a set of logical qualifiers and infers dependent types for the expressions in the OCAML program. To demonstrate the utility of our approach, we describe experiments using DSOLVE to statically verify the safety of array accesses on a set of OCAML benchmarks that were previously annotated with dependent types as part of the DML project. We show that when used in conjunction with a fixed set of array bounds checking qualifiers, DSOLVE reduces the amount of manual annotation required for proving safety from 31\% of program text to under 1\%.}
+      \field{booktitle}{Proceedings of the 29th {ACM} {SIGPLAN} {Conference} on {Programming} {Language} {Design} and {Implementation}}
+      \field{isbn}{978-1-59593-860-2}
+      \field{month}{6}
+      \field{series}{{PLDI} '08}
+      \field{title}{Liquid types}
+      \field{urlday}{4}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{159\bibrangedash 169}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1145/1375581.1375602
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/blazz1t/Zotero/storage/5D22K4AC/Rondon et al. - 2008 - Liquid types.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/1375581.1375602
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/1375581.1375602
+      \endverb
+    \endentry
+    \entry{kazerounian_refinement_2018}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=8e6beaad8fee1cba706a86b985857aeb}{%
+           family={Kazerounian},
+           familyi={K\bibinitperiod},
+           given={Milod},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b78a377734a44faae5e925c1ce02ae42}{%
+           family={Vazou},
+           familyi={V\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=dfb060b6ad2b33198a646c908da68c33}{%
+           family={Bourgerie},
+           familyi={B\bibinitperiod},
+           given={Austin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=55173464701b5010f40690c34f4477ef}{%
+           family={Foster},
+           familyi={F\bibinitperiod},
+           given={Jeffrey\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=891b5b8af87210ad697663a0f5e1e379}{%
+           family={Torlak},
+           familyi={T\bibinitperiod},
+           given={Emina},
+           giveni={E\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=fd8f081bfdff32c5bab11f6680b91459}{%
+           family={Dillig},
+           familyi={D\bibinitperiod},
+           given={Isil},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1684412f847ca2768dd69ca981ed8458}{%
+           family={Palsberg},
+           familyi={P\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{f13974229978f1657c7ee63db8fa442f}
+      \strng{fullhash}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{fullhashraw}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{bibnamehash}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{authorbibnamehash}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{authornamehash}{f13974229978f1657c7ee63db8fa442f}
+      \strng{authorfullhash}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{authorfullhashraw}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{editorbibnamehash}{cb5ed8d97b771ca720462828d087c4fa}
+      \strng{editornamehash}{cb5ed8d97b771ca720462828d087c4fa}
+      \strng{editorfullhash}{cb5ed8d97b771ca720462828d087c4fa}
+      \strng{editorfullhashraw}{cb5ed8d97b771ca720462828d087c4fa}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Refinement types are a popular way to specify and reason about key program properties. In this paper, we introduce RTR, a new system that adds refinement types to Ruby. RTR is built on top of RDL, a Ruby type checker that provides basic type information for the verification process. RTR works by encoding its verification problems into Rosette, a solver-aided host language. RTR handles mixins through assume-guarantee reasoning and uses just-in-time verification for metaprogramming. We formalize RTR by showing a translation from a core, Ruby-like language with refinement types into Rosette. We apply RTR to check a range of functional correctness properties on six Ruby programs. We find that RTR can successfully verify key methods in these programs, taking only a few minutes to perform verification.}
+      \field{booktitle}{Verification, {Model} {Checking}, and {Abstract} {Interpretation}}
+      \field{isbn}{978-3-319-73721-8}
+      \field{title}{Refinement {Types} for {Ruby}}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{269\bibrangedash 290}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/978-3-319-73721-8_13
+      \endverb
+      \keyw{Dynamic Languages,Refinement Types,Rosette,Ruby}
+    \endentry
+    \entry{gamboa_usability_2025}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=314ffdca4914ad47cf5c02a4e3ed71e4}{%
+           family={Gamboa},
+           familyi={G\bibinitperiod},
+           given={Catarina},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d4fc8dd451325c5fbe51db15e632b1c6}{%
+           family={Reese},
+           familyi={R\bibinitperiod},
+           given={Abigail},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a5756c022a26a33c9c81cc1197da62eb}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Alcides},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0d07eaf3b5b1e4de2605019d4f388fae}{%
+           family={Aldrich},
+           familyi={A\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4edd1a71e8fc2df3b5129454460ea773}
+      \strng{fullhash}{e9852516b71f84c491664d53425797e7}
+      \strng{fullhashraw}{e9852516b71f84c491664d53425797e7}
+      \strng{bibnamehash}{e9852516b71f84c491664d53425797e7}
+      \strng{authorbibnamehash}{e9852516b71f84c491664d53425797e7}
+      \strng{authornamehash}{4edd1a71e8fc2df3b5129454460ea773}
+      \strng{authorfullhash}{e9852516b71f84c491664d53425797e7}
+      \strng{authorfullhashraw}{e9852516b71f84c491664d53425797e7}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Liquid types can express richer verification properties than simple type systems. However, despite their advantages, liquid types have yet to achieve widespread adoption. To understand why, we conducted a study analyzing developers’ challenges with liquid types, focusing on LiquidHaskell. Our findings reveal nine key barriers that span three categories, including developer experience, scalability challenges with complex and large codebases, and understanding the verification process. Together, these obstacles provide a comprehensive view of the usability challenges to the broader adoption of liquid types and offer insights that can inform the current and future design and implementation of liquid type systems.}
+      \field{journaltitle}{Proc. ACM Program. Lang.}
+      \field{month}{6}
+      \field{number}{PLDI}
+      \field{title}{Usability {Barriers} for {Liquid} {Types}}
+      \field{urlday}{4}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{volume}{9}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{224:1911\bibrangedash 224:1936}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1145/3729327
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3729327
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3729327
+      \endverb
+    \endentry
+    \entry{vazou_liquidhaskell_2014}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=b78a377734a44faae5e925c1ce02ae42}{%
+           family={Vazou},
+           familyi={V\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0d9abd78b6d829df1944e988fd738c17}{%
+           family={Seidel},
+           familyi={S\bibinitperiod},
+           given={Eric\bibnamedelima L.},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=0b731274f4d045521bac73df419287ea}{%
+           family={Jhala},
+           familyi={J\bibinitperiod},
+           given={Ranjit},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{b25ddb162a4e5fe57adb7117e204df84}
+      \strng{fullhash}{9212bdfd8b0332d2901d381665717aa0}
+      \strng{fullhashraw}{9212bdfd8b0332d2901d381665717aa0}
+      \strng{bibnamehash}{9212bdfd8b0332d2901d381665717aa0}
+      \strng{authorbibnamehash}{9212bdfd8b0332d2901d381665717aa0}
+      \strng{authornamehash}{b25ddb162a4e5fe57adb7117e204df84}
+      \strng{authorfullhash}{9212bdfd8b0332d2901d381665717aa0}
+      \strng{authorfullhashraw}{9212bdfd8b0332d2901d381665717aa0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Haskell has many delightful features. Perhaps the one most beloved by its users is its type system that allows developers to specify and verify a variety of program properties at compile time. However, many properties, typically those that depend on relationships between program values are impossible, or at the very least, cumbersome to encode within the existing type system. Many such properties can be verified using a combination of Refinement Types and external SMT solvers. We describe the refinement type checker liquidHaskell, which we have used to specify and verify a variety of properties of over 10,000 lines of Haskell code from various popular libraries, including containers, hscolour, bytestring, text, vector-algorithms and xmonad. First, we present a high-level overview of liquidHaskell, through a tour of its features. Second, we present a qualitative discussion of the kinds of properties that can be checked -- ranging from generic application independent criteria like totality and termination, to application specific concerns like memory safety and data structure correctness invariants. Finally, we present a quantitative evaluation of the approach, with a view towards measuring the efficiency and programmer effort required for verification, and discuss the limitations of the approach.}
+      \field{booktitle}{Proceedings of the 2014 {ACM} {SIGPLAN} symposium on {Haskell}}
+      \field{isbn}{978-1-4503-3041-1}
+      \field{month}{9}
+      \field{series}{Haskell '14}
+      \field{shorttitle}{{LiquidHaskell}}
+      \field{title}{{LiquidHaskell}: experience with refinement types in the real world}
+      \field{urlday}{4}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{39\bibrangedash 51}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1145/2633357.2633366
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/2633357.2633366
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/2633357.2633366
+      \endverb
+    \endentry
+    \entry{vekris_refinement_2016}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=2ff00ffc57c51be67f642ecf8493b53b}{%
+           family={Vekris},
+           familyi={V\bibinitperiod},
+           given={Panagiotis},
+           giveni={P\bibinitperiod}}}%
+        {{hash=83151fa326d2ae5403cf391f3da85260}{%
+           family={Cosman},
+           familyi={C\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=0b731274f4d045521bac73df419287ea}{%
+           family={Jhala},
+           familyi={J\bibinitperiod},
+           given={Ranjit},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{e9e9ac503409f00f0eebc7dfff5e32ee}
+      \strng{fullhash}{fb18b015b60ff5845acd2fa66d90f2aa}
+      \strng{fullhashraw}{fb18b015b60ff5845acd2fa66d90f2aa}
+      \strng{bibnamehash}{fb18b015b60ff5845acd2fa66d90f2aa}
+      \strng{authorbibnamehash}{fb18b015b60ff5845acd2fa66d90f2aa}
+      \strng{authornamehash}{e9e9ac503409f00f0eebc7dfff5e32ee}
+      \strng{authorfullhash}{fb18b015b60ff5845acd2fa66d90f2aa}
+      \strng{authorfullhashraw}{fb18b015b60ff5845acd2fa66d90f2aa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present Refined TypeScript (RSC), a lightweight refinement type system for TypeScript, that enables static verification of higher-order, imperative programs. We develop a formal system for RSC that delineates the interaction between refinement types and mutability, and enables flow-sensitive reasoning by translating input programs to an equivalent intermediate SSA form. By establishing type safety for the intermediate form, we prove safety for the input programs. Next, we extend the core to account for imperative and dynamic features of TypeScript, including overloading, type reflection, ad hoc type hierarchies and object initialization. Finally, we evaluate RSC on a set of real-world benchmarks, including parts of the Octane benchmarks, D3, Transducers, and the TypeScript compiler. We show how RSC successfully establishes a number of value dependent properties, such as the safety of array accesses and downcasts, while incurring a modest overhead in type annotations and code restructuring.}
+      \field{booktitle}{Proceedings of the 37th {ACM} {SIGPLAN} {Conference} on {Programming} {Language} {Design} and {Implementation}}
+      \field{isbn}{978-1-4503-4261-2}
+      \field{month}{6}
+      \field{series}{{PLDI} '16}
+      \field{title}{Refinement types for {TypeScript}}
+      \field{urlday}{4}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{310\bibrangedash 325}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1145/2908080.2908110
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/2908080.2908110
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/2908080.2908110
+      \endverb
+    \endentry
+    \entry{jhala_refinement_2020}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=0b731274f4d045521bac73df419287ea}{%
+           family={Jhala},
+           familyi={J\bibinitperiod},
+           given={Ranjit},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b78a377734a44faae5e925c1ce02ae42}{%
+           family={Vazou},
+           familyi={V\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{b9c0f80a4f9a67c95b62b4754e789157}
+      \strng{fullhash}{b9c0f80a4f9a67c95b62b4754e789157}
+      \strng{fullhashraw}{b9c0f80a4f9a67c95b62b4754e789157}
+      \strng{bibnamehash}{b9c0f80a4f9a67c95b62b4754e789157}
+      \strng{authorbibnamehash}{b9c0f80a4f9a67c95b62b4754e789157}
+      \strng{authornamehash}{b9c0f80a4f9a67c95b62b4754e789157}
+      \strng{authorfullhash}{b9c0f80a4f9a67c95b62b4754e789157}
+      \strng{authorfullhashraw}{b9c0f80a4f9a67c95b62b4754e789157}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Refinement types enrich a language's type system with logical predicates that circumscribe the set of values described by the type, thereby providing software developers a tunable knob with which to inform the type system about what invariants and correctness properties should be checked on their code. In this article, we distill the ideas developed in the substantial literature on refinement types into a unified tutorial that explains the key ingredients of modern refinement type systems. In particular, we show how to implement a refinement type checker via a progression of languages that incrementally add features to the language or type system.}
+      \field{month}{10}
+      \field{note}{arXiv:2010.07763 [cs.PL]}
+      \field{shorttitle}{Refinement {Types}}
+      \field{title}{Refinement {Types}: {A} {Tutorial}}
+      \field{urlday}{4}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.2010.07763
+      \endverb
+      \verb{file}
+      \verb PDF:/home/blazz1t/Zotero/storage/392IUR8M/Jhala and Vazou - 2020 - Refinement Types A Tutorial.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2010.07763
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2010.07763
+      \endverb
+      \keyw{Computer Science - Logic in Computer Science,Computer Science - Programming Languages,Computer Science - Software Engineering}
+    \endentry
+    \entry{damas_principal_nodate}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ebb56c16150fa208ceb717678cd1bee1}{%
+           family={Damas},
+           familyi={D\bibinitperiod},
+           given={L},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c68145a48b16df1bf26c2013062f47f3}{%
+           family={Milner},
+           familyi={M\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{5b1fb1b07370df4e050d0715c1cac42a}
+      \strng{fullhash}{5b1fb1b07370df4e050d0715c1cac42a}
+      \strng{fullhashraw}{5b1fb1b07370df4e050d0715c1cac42a}
+      \strng{bibnamehash}{5b1fb1b07370df4e050d0715c1cac42a}
+      \strng{authorbibnamehash}{5b1fb1b07370df4e050d0715c1cac42a}
+      \strng{authornamehash}{5b1fb1b07370df4e050d0715c1cac42a}
+      \strng{authorfullhash}{5b1fb1b07370df4e050d0715c1cac42a}
+      \strng{authorfullhashraw}{5b1fb1b07370df4e050d0715c1cac42a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Principal {Type}-{Schemes} for {Functional} {Programs}}
+      \true{nocite}
+      \verb{file}
+      \verb PDF:/home/blazz1t/Zotero/storage/SQZ6RYHI/Damas and Milner - Principal Type-Schemes for Functional Programs.pdf:application/pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

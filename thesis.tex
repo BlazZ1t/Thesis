@@ -21,7 +21,7 @@
 
 \usepackage[english]{babel}
 \usepackage[backend=biber,style=ieee,autocite=inline]{biblatex}
-\bibliography{ref.bib}
+\addbibresource{ref.bib}
 \DefineBibliographyStrings{english}{%
   bibliography = {References},}
 \usepackage{blindtext}
@@ -150,6 +150,7 @@
 
 
 %% REFERENCES
+\nocite{*}
 \printbibliography[heading=bibintoc,title={Bibliography cited}]
 \include{chapters/appex}
 \end{document}
