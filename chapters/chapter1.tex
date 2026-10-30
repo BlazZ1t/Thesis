@@ -27,7 +27,25 @@ collection-length constraints. This makes developers rely on assumptions and run
 This paper attempts to resolve this issue by introducing a refinement type system to statically
 confirm safety of array access operations while adding little annotation burden to the developers.
 
+\section{Objectives}
+\label{sec:objectives}
+We aim to achieve the following goals:
+\begin{itemize}
+    \item An implementation of an analyzer for a custom predicate language 
+    \item An implementation of a refinement type checker and type inference algorithm with usage of Z3 constraints solver
+    \item Integration of said checker into Dart analysis workflow \cite{noauthor_analyzer_nodate}
+    \item Evaluation of the effectivness of the implementation on a package corpus from \href{pub.dev}{pub.dev}
+\end{itemize}
 
+\section{Limitations \& Scope}
+\label{sec:limitations_and_scope}
+The implementation will cover the following features of Dart and will allow users to write the following refinements:
+\begin{itemize}
+    \item Refinement type definitions that will allow users to extend integers, booleans and lists with refinements
+    \item Definition of variables with refinement types
+    \item Definition of recursive/non-recursive functions
+    \item Usage of $length(xs)$ function in refinements for List type and its refinement extensions
+\end{itemize}
 
 % \section{Spacing \& Type}
 % \label{sec:section}

@@ -2,7 +2,86 @@
 \label{chap:lr}
 \chaptermark{Second Chapter Heading}
 
+\section{Refinement Types}
+\label{sec:refinement_types_defintion}
+Refinement types allow the developer to extend a language's type system
+with predicates \cite{jhala_refinement_2020}. For example, the user can constraint
+the regular integer type with the following refinement 
+to get the type that represents only natural numbers.
 
+\begin{lstlisting}
+    @Refinement(identifier: 'x', predicate: 'x >= 0')
+    typedef nat = int;
+\end{lstlisting}
+
+With such refinements the developer can easily avoid index out of bounds errors by, for example,
+defining the following refinement:
+\begin{lstlisting}
+    @Refinement(parameters: ['list', 'index'], predicate: 'index <= length(list)')
+    T get(List<T> list, int index) => list[index];
+\end{lstlisting}
+
+The type checker will ensure that the index provided to the function is smaller than the
+length of the list, and if not, will report this operation as unsafe.
+
+\section{Liquid Types and Refinement Type Inference}
+\label{sec:liquid_types}
+Annotating each variable, each type with with refinement information can get
+overwhelming and consume more time than the annotations will reduce in error finding.
+To address this issue we can implement refinement type inference using \textit{Logically Qualified Data Types} also
+known as \textit{Liquid Types} system explored by \textit{Rondon et al.}\cite{rondon_liquid_2008}
+which will provide the developer with strength of refinement types without additional unnecessary effort.
+The inference process involves the following steps:
+\begin{enumerate}
+    \item Hindley-Milner type inference \cite{damas_principal_nodate}
+    \item Constraint generation
+    \item Constraint solving using an SMT solver \cite{de_moura_z3_2008}
+\end{enumerate}
+Assume a function \textit{safeHead}, where we want to check safety of \textit{xs[0]} operation:
+\begin{lstlisting}
+    int safeHead(List<int> xs) => xs.length > 0 ? xs[0] : 0;
+\end{lstlisting}
+
+Without type inference we would need to manually specify length property of \textit{xs}
+as a refinement, however liquid types can infer the constraint from the program itself. 
+
+\section{Refinement Types in Other Languages}
+\label{sec:existing_implementations}
+Similar implementations exist for other programming languages. The most similar one to my implementation is
+a refinement type system for TypeScript \cite{vekris_refinement_2016} by \textit{Verkis et al}.
+Their work demonstrates an integration of a refinement type system into an imperative object-oriented language while
+retaining support for higher-order functions.
+\\
+
+One of the main problems the implementation faces is treatment of mutable variables.
+Since the value of a variable can change during program execution, refinement predicates can become
+invalid after reassignment. To address the issue the authors translate input programs into Static Single Assignment form,
+where each variable is assigned only once. This allows their checker to reason about individual variable versions and retain
+the information about conditions under which they were assigned.
+\\
+
+The implementation also uses the Liquid Types \cite{rondon_liquid_2008} system which, on par with TypeScript 
+being similar to Dart on many accounts \cite{noauthor_dart-langlanguage_2026}, makes this implementation
+a good reference point for my project.
+\\
+Other notable examples of such system implementations are \cite[Liquid Haskell]{vazou_liquidhaskell_2014}, \cite[Refinement Types For Ruby]{kazerounian_refinement_2018}
+, and \cite[Flux: Liquid Types for Rust]{lehmann_flux_2023}
+
+\section{SMT Solvers and Z3}
+\label{sec:smt_solvers}
+Satisfiability Modulo Theories (SMT) is a problem that asks whether a first-order logic
+formula is satisfiable with respect to a background theory \cite{biere_chapter_2021}. It extends Boolean Satisfiability (SAT) problem
+by adding reasoning such as integers, arrays, bit-verctos and uninterpreted functions. Since SMT solvers
+are able of reasoning about relationships between values and operations within theories, they become
+particularly useful in software verification, where program properties involve arithmetic constraints, equality connections
+and data structures.
+\\
+de Moura and Bjørner present Z3 \cite{de_moura_z3_2008}, an SMT solver developed at Microsoft
+Research and designed specifically for applications in software verification. In context of refinement
+type checking, an SMT solver can serve as the reasoning engine, responsible for verifying refinement predicates and
+generating constraints, making Z3 suitable for proposed refinement type checker for Dart. Using Z3 allows to
+delegate logical reasoning to Z3 and focus on the implementation on extracting extracting properties and interpreting
+verification results.
 
 % \Blindtext[2]
 

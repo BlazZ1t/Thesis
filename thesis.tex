@@ -19,6 +19,52 @@
 \usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Define Dart language properties
+\lstdefinelanguage{Dart}{
+  morekeywords={
+    abstract, as, assert, async, await, break, case, catch, class, 
+    const, continue, covariant, default, deferred, do, dynamic, 
+    else, enum, export, extends, extension, external, factory, 
+    false, final, finally, for, Function, get, hide, if, implements, 
+    import, in, inout, interface, is, late, library, mixin, new, 
+    null, of, on, operator, out, part, required, rethrow, return, 
+    set, show, static, super, switch, sync, this, throw, true, try, 
+    typedef, var, void, while, with, yield
+  },
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[s]{r"}{"},
+  morestring=[s]{r'}{'}
+}
+
+% Define color palette
+\definecolor{dartKeyword}{RGB}{0, 160, 180}
+\definecolor{dartComment}{RGB}{120, 130, 140}
+\definecolor{dartString}{RGB}{70, 150, 80}
+\definecolor{dartBackground}{RGB}{245, 247, 248}
+
+% Apply styling
+\lstset{
+  language=Dart,
+  backgroundcolor=\color{dartBackground},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{dartKeyword}\bfseries,
+  commentstyle=\color{dartComment}\itshape,
+  stringstyle=\color{dartString},
+  breaklines=true,
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordsprefix=@, % Optional: highlights annotations like @override
+}
+
+
 \usepackage[english]{babel}
 \usepackage[backend=biber,style=ieee,autocite=inline]{biblatex}
 \addbibresource{ref.bib}
