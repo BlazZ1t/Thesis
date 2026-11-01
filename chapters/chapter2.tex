@@ -15,11 +15,32 @@ to get the type that represents only natural numbers.
 With such refinements the developer can easily avoid index out of bounds errors by, for example,
 defining the following refinement:
 \begin{lstlisting}
-    @Refinement(parameters: ['list', 'index'], predicate: 'index <= length(list)')
-    T get(List<T> list, int index) => list[index];
+    @Refinement(
+        parameters: ['list', 'index'],
+        predicate: 'index >= 0 && index < length(list)',
+    )
+    int get(List<int> list, int index) => list[index];
 \end{lstlisting}
 The type checker will ensure that the index provided to the function is smaller than the
 length of the list, and if not, will report this operation as unsafe.
+
+Refinement types can also be used to express constraints to function parameters that 
+cannot be captured by ordinary type checking. Consider a function that finds an average of
+a list of integers. Although its parameter is correctly typed \texttt{List<int>}, the 
+function cannot safely process an empty list, since it will involve division by zero:
+\begin{lstlisting}
+    @Refinement(
+        identifier: 'values',
+        predicate: 'length(values) > 0',
+    )
+    double calculateAverage(List<int> values) {
+      return values.reduce((a, b) => a + b) / values.length;
+    }
+
+    calculateAverage([2, 4, 6]); // Safe
+    calculateAverage([]);        // Refinement violation
+\end{lstlisting}
+
 
 \section{Liquid Types and Refinement Type Inference}
 \label{sec:liquid_types}
@@ -44,35 +65,173 @@ as a refinement, however liquid types can infer the constraint from the program 
 \section{Refinement Types in Other Languages}
 \label{sec:existing_implementations}
 Similar implementations exist for other programming languages. The most similar one to my implementation is
-a refinement type system for TypeScript \cite{vekrisRefinementTypesTypeScript2016} by \textit{Vekris et al}.
+Refined TypeScript (RSC) \cite{vekrisRefinementTypesTypeScript2016} by \textit{Vekris et al}.
 Their work demonstrates an integration of a refinement type system into an imperative object-oriented language while
 retaining support for higher-order functions.
-\\One of the main problems the implementation faces is treatment of mutable variables.
-Since the value of a variable can change during program execution, refinement predicates can become
-invalid after reassignment. To address the issue the authors translate input programs into Static Single Assignment form,
-where each variable is assigned only once. This allows their checker to reason about individual variable versions and retain
-the information about conditions under which they were assigned.
-\\The implementation also uses the Liquid Types \cite{rondonLiquidTypes2008} system which, on par with TypeScript 
-being similar to Dart on many accounts \cite{DartlangLanguage2026}, makes this implementation
-a good reference point for my project.
-\\Other notable examples of such system implementations are \cite[Liquid Haskell]{vazouLiquidHaskellExperienceRefinement2014}, 
-\cite[Refinement Types For Ruby]{kazerounianRefinementTypesRuby2018}, and \cite[Flux: Liquid Types for Rust]{lehmannFluxLiquidTypes2023}
+\\
+One of the main challenges addressed by RSC is interaction between refinements and mutable
+program state. Since the value of a variable can change throughout runtime, the previously
+established refinement can become invalid after reassignment. To address this issue the 
+authors translate the input program into Static Single Assessment (SSA) form, where each variable
+is only assigned once, which allows the checker to reason only about a single variable version
+in context in which it was assigned.
+\\
+However, SSA alone does not solve the problem of mutation through references.
+RSC addresses this issue by separating mutable and immutable fields.
+Refinements are allowed to depend on immutable fields, since their value doesn't change
+after initialization. Mutable fields are subject to class invariants that must be preserved
+whenever they are updated.
+\\
+RSC demonstrates this approach using a two-dimensional array.
+The dimension of the 2D array are speicified through refinement
+predicates that relate its length to the immutable height and width of the containing object.
+When the array value is replaced, the checker verifies that the new value satisfies the speicified
+size constraints. This approach allows RSC to
+verify array access safety and object invariants in cases of mutations. \cite{vekrisRefinementTypesTypeScript2016}
+
+Another implementation that addresses mutable data types is Flux: Liquid Types for Rust \cite{lehmannFluxLiquidTypes2023}
+by \textit{Lehmann et al.}.
+Unlike RSC, Flux builds upon Rust's ownership and borrowing mechanisms to
+analyze mutable memory locations. Its main idea is to combine
+refinement types with ownership guarantees, allowing the checker to track
+changes to the properties of mutable data without losing soundness due to
+aliasing.
+
+Flux distinguishes between exclusive ownership and borrowing. When a
+function has exclusive ownership of a value, it can modify that value and
+update its refinement accordingly. This is referred to as a strong update.
+For example, a variable representing an integer with a refinement stating
+that its value equals \(n\) can update this refinement to \(n+1\) after an
+incrementation of the variable.
+
+Borrowing introduces additional restrictions. A shared reference provides
+read-only access, while a mutable reference permits modifications but
+requires the original refinement invariant to remain satisfied. Flux also
+introduces strong references, which allow functions to specify how the
+refinement of the referenced value changes after a call.
+
+Particularly relevant to this thesis is Flux's treatment of mutable
+collections. The authors demonstrate a refined API for Rust vectors
+(\texttt{RVec}), where the vector's length is represented directly in its
+type. For example, a vector of length \(n\) has a type indexed by \(n\),
+and its indexing operations require an index smaller than that
+length. Operations that modify the vector can update this refinement.
+For example the \texttt{push} operation, updates the vector length refinement to be \(n + 1\)
+The following indexing operations are using this updated length information.
+
+This approach is particularly relevant to the proposed implementation,
+as it demonstrates how refinement types can be tracked across
+operations that change list size. However, Flux relies on Rust's
+ownership and borrowing guarantees to control aliasing and mutation.
+
+Other notable implementations include LiquidHaskell
+\cite{vazouLiquidHaskellExperienceRefinement2014} and Refinement Types
+for Ruby \cite{kazerounianRefinementTypesRuby2017}. LiquidHaskell
+demonstrates the application of refinement types to a functional language,
+where immutable values simplify the preservation of
+refinement predicates. In contrast, the Ruby implementation (RTR) addresses
+mutable object fields by explicitly tracking which fields a function may
+modify. When a method is treated modularly, the verifier invalidates
+the previous knowledge about the modified fields and relies on the
+method's postconditions to establish their properties after the call.
+This is implemented through a \texttt{modifies} specification and
+symbolic state updates.
+
+These implementations demonstrate different approaches to handling
+of mutable data, providing a useful foundation for the proposed implementation.
+
 
 \section{SMT Solvers and Z3}
 \label{sec:smt_solvers}
-Satisfiability Modulo Theories (SMT) is a problem that asks whether a first-order logic
+Satisfiability Modulo Theories (SMT) is a decision problem that asks whether a first-order logic
 formula is satisfiable with respect to a background theory \cite{barrettChapter33Satisfiability2021}. It extends Boolean Satisfiability (SAT) problem
 by adding reasoning such as integers, arrays, bit-verctos and uninterpreted functions. Since SMT solvers
 are able of reasoning about relationships between values and operations within theories, they become
 particularly useful in software verification, where program properties involve arithmetic constraints, equality connections
 and data structures.
-\\
-de Moura and Bjørner present Z3 \cite{demouraZ3EfficientSMT2008}, an SMT solver developed at Microsoft
-Research and designed specifically for applications in software verification. In context of refinement
-type checking, an SMT solver can serve as the reasoning engine, responsible for verifying refinement predicates and
-generating constraints, making Z3 suitable for proposed refinement type checker for Dart. Using Z3 allows to
-delegate logical reasoning to Z3 and focus on the implementation on extracting extracting properties and interpreting
-verification results.
+
+In context of refinement type checking, an SMT solver serves as an engine responsible for verifying
+refinement predicates. The checker converts program properties into logical constraints, which are then
+passed to the solver. For example to determine the safety of a list indexing operation, the implementation must determine
+that the index is smaller than the list length and is larger or equal to zero. This can be expressed 
+as a logical implication and determined truthful by checking whether the opposite is satisfiable.
+Unsatisfied results means that the original property holds under given conditions.
+
+Several SMT solvers can be used for this problem. In this section we are considering three popular
+implementations: Z3, cvc5 and Yices 2. Although all three support required functionality, they differ in
+their architecture, supported interfaces and additional capabilities.
+
+\subsection{Z3}
+Z3 is an SMT solver developed by Microsoft and introduced by de Moura and Bjørner \cite{demouraZ3EfficientSMT2008}.
+It was designed with application in software verification and formal methods in mind. Its general-purpose
+SMT engine follows the Conflict-Driven Clause Learning modulo (CDCL(T)) architecture. In this approach,
+an SAT solver coordinates specialized theory solvers that exchange information between the constraints they are
+solving.
+
+Z3 supports a wide range of theories, including integer and real arithmetics, arrays, bit-vectors,
+uninterpreted functions and algebraic datatypes. It lso provides APIs for several programming languages
+including C, C++, Java, Python and .NET, as well as supports SMT-LIB input format. This makes it possible
+to incorporate Z3 into any programming language by invoking an independent process communicationg through
+SMT-LIB scripts.
+
+Its popularity in software verification and extensive theory support make Z3 a suitable candidate for
+the proposed refinement type checker.
+
+\subsection{cvc5}
+cvc5 is an open-source SMT solver that was developed as a versatile and extensible theorem-proving
+engine, with particular focus on supporting a broad range of theories and proof production \cite{barbosaCvc5VersatileIndustrialStrength2022}.
+Similar to Z3, its main solving architecture is based on CDCL(T).
+
+cvc5 supports integer and real arithmetic, arrays, bit-vectors, algebraic datatypes, strings, sets and several
+other theories. One of its unique features is its proof-production infrastructure, that is capable of generating
+detailed proofs of unsatisfiability. This is particularly relevant in applications that require independently 
+checkable verification results
+
+The solver provides an API for C++, with additional interfaces for C, Java and Python, as well as can be
+used with SMT-LIB. However, proof production is not a primary requirement of the proposed implementation,
+which only needs to determine whether generated verification conditions are satisfiable.
+
+\subsection{Yices 2}
+Yices 2 is an SMT solver developed by SRI International and presented by Dutertre \cite{dutertreYices222014}.
+Its architecture is modular and allows user to configure solving contexts with different solvers and solving procedures.
+It supports the standard CDCL(T) approach for many theories as well as Model-Constructing Satisfiability Calculus
+(MCSAT) solver for problems involving nonliear arithmetics.
+
+Yices 2 supports integer and real arithmetic, arrays, bit-vectors, uninterpreted functions, and additional data types.
+It accepts formulas in SMT-LIB format and provides a C API and bindings for Java, Python, Go, and OCaml.
+
+An important characteristic of Yices 2 is its focus on efficient solving of arithmetic problems. These characteristics
+make it a viable alternative for refinement type checking, particularly when verification conditions primarly
+consist of arithmetic constraints.
+
+\subsection{Comparison and Selection}
+All three solvers provide the basic functionality required by the proposed refinement type checker.
+Integer arithmetic and Boolean reasoning are sufficient for the initial verification scope.
+This makes the choice of solver based mainly on integration capabilities, extensibility, and suitability
+for software verification.
+
+Z3 offers a convenient combination of these properties. Its established role in software verification, ease of implementation
+via SMT-LIB scripts make it a practical choice for integration into the proposed implementation. Its architecture 
+also provides specialized solving procedures that may become useful if the verification language 
+scope is extended.
+
+cvc5 offers similar general-purpose SMT capabilities and has strong proof-production infrastructure.
+However, generating independently checkable proofs is not required by this project, making this advantage
+not particularly important for the implementation. Yices 2 provides and efficient and configurable alternative,
+especially for arithmetic-heavy problems, but its advantages are less significant for the limited set of theories
+currently required.
+
+Based on these conclusions, Z3 is selected as the SMT solver for the proposed refinement type checker.
+This is primarly motivated by its focus on software verification, broad integration support and possibility
+for painless future extensions.
+
+
+% de Moura and Bjørner present Z3 \cite{demouraZ3EfficientSMT2008}, an SMT solver developed at Microsoft
+% Research and designed specifically for applications in software verification. In context of refinement
+% type checking, an SMT solver can serve as the reasoning engine, responsible for verifying refinement predicates and
+% generating constraints, making Z3 suitable for proposed refinement type checker for Dart. Using Z3 allows to
+% delegate logical reasoning to Z3 and focus on the implementation on extracting extracting properties and interpreting
+% verification results.
 
 % \Blindtext[2]
 

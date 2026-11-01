@@ -423,135 +423,6 @@
       \verb 10.1145/2908080.2908110
       \endverb
     \endentry
-    \entry{vazouLiquidHaskellExperienceRefinement2014}{inproceedings}{}{}
-      \name{author}{3}{}{%
-        {{hash=b78a377734a44faae5e925c1ce02ae42}{%
-           family={Vazou},
-           familyi={V\bibinitperiod},
-           given={Niki},
-           giveni={N\bibinitperiod}}}%
-        {{hash=0d9abd78b6d829df1944e988fd738c17}{%
-           family={Seidel},
-           familyi={S\bibinitperiod},
-           given={Eric\bibnamedelima L.},
-           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=0b731274f4d045521bac73df419287ea}{%
-           family={Jhala},
-           familyi={J\bibinitperiod},
-           given={Ranjit},
-           giveni={R\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {New York, NY, USA}%
-      }
-      \list{publisher}{1}{%
-        {Association for Computing Machinery}%
-      }
-      \strng{namehash}{b25ddb162a4e5fe57adb7117e204df84}
-      \strng{fullhash}{9212bdfd8b0332d2901d381665717aa0}
-      \strng{fullhashraw}{9212bdfd8b0332d2901d381665717aa0}
-      \strng{bibnamehash}{9212bdfd8b0332d2901d381665717aa0}
-      \strng{authorbibnamehash}{9212bdfd8b0332d2901d381665717aa0}
-      \strng{authornamehash}{b25ddb162a4e5fe57adb7117e204df84}
-      \strng{authorfullhash}{9212bdfd8b0332d2901d381665717aa0}
-      \strng{authorfullhashraw}{9212bdfd8b0332d2901d381665717aa0}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Haskell has many delightful features. Perhaps the one most beloved by its users is its type system that allows developers to specify and verify a variety of program properties at compile time. However, many properties, typically those that depend on relationships between program values are impossible, or at the very least, cumbersome to encode within the existing type system. Many such properties can be verified using a combination of Refinement Types and external SMT solvers. We describe the refinement type checker liquidHaskell, which we have used to specify and verify a variety of properties of over 10,000 lines of Haskell code from various popular libraries, including containers, hscolour, bytestring, text, vector-algorithms and xmonad. First, we present a high-level overview of liquidHaskell, through a tour of its features. Second, we present a qualitative discussion of the kinds of properties that can be checked -- ranging from generic application independent criteria like totality and termination, to application specific concerns like memory safety and data structure correctness invariants. Finally, we present a quantitative evaluation of the approach, with a view towards measuring the efficiency and programmer effort required for verification, and discuss the limitations of the approach.}
-      \field{booktitle}{Proceedings of the 2014 {{ACM SIGPLAN}} Symposium on {{Haskell}}}
-      \field{isbn}{978-1-4503-3041-1}
-      \field{month}{9}
-      \field{series}{Haskell '14}
-      \field{shorttitle}{{{LiquidHaskell}}}
-      \field{title}{{{LiquidHaskell}}: Experience with Refinement Types in the Real World}
-      \field{urlday}{4}
-      \field{urlmonth}{10}
-      \field{urlyear}{2026}
-      \field{year}{2014}
-      \field{urldateera}{ce}
-      \field{pages}{39\bibrangedash 51}
-      \range{pages}{13}
-      \verb{doi}
-      \verb 10.1145/2633357.2633366
-      \endverb
-    \endentry
-    \entry{kazerounianRefinementTypesRuby2018}{inproceedings}{}{}
-      \name{author}{5}{}{%
-        {{hash=8e6beaad8fee1cba706a86b985857aeb}{%
-           family={Kazerounian},
-           familyi={K\bibinitperiod},
-           given={Milod},
-           giveni={M\bibinitperiod}}}%
-        {{hash=b78a377734a44faae5e925c1ce02ae42}{%
-           family={Vazou},
-           familyi={V\bibinitperiod},
-           given={Niki},
-           giveni={N\bibinitperiod}}}%
-        {{hash=dfb060b6ad2b33198a646c908da68c33}{%
-           family={Bourgerie},
-           familyi={B\bibinitperiod},
-           given={Austin},
-           giveni={A\bibinitperiod}}}%
-        {{hash=55173464701b5010f40690c34f4477ef}{%
-           family={Foster},
-           familyi={F\bibinitperiod},
-           given={Jeffrey\bibnamedelima S.},
-           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=891b5b8af87210ad697663a0f5e1e379}{%
-           family={Torlak},
-           familyi={T\bibinitperiod},
-           given={Emina},
-           giveni={E\bibinitperiod}}}%
-      }
-      \name{editor}{2}{}{%
-        {{hash=fd8f081bfdff32c5bab11f6680b91459}{%
-           family={Dillig},
-           familyi={D\bibinitperiod},
-           given={Isil},
-           giveni={I\bibinitperiod}}}%
-        {{hash=1684412f847ca2768dd69ca981ed8458}{%
-           family={Palsberg},
-           familyi={P\bibinitperiod},
-           given={Jens},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Cham}%
-      }
-      \list{publisher}{1}{%
-        {Springer International Publishing}%
-      }
-      \strng{namehash}{f13974229978f1657c7ee63db8fa442f}
-      \strng{fullhash}{6a435e55dc3c0c7f5eed1565d0da252a}
-      \strng{fullhashraw}{6a435e55dc3c0c7f5eed1565d0da252a}
-      \strng{bibnamehash}{6a435e55dc3c0c7f5eed1565d0da252a}
-      \strng{authorbibnamehash}{6a435e55dc3c0c7f5eed1565d0da252a}
-      \strng{authornamehash}{f13974229978f1657c7ee63db8fa442f}
-      \strng{authorfullhash}{6a435e55dc3c0c7f5eed1565d0da252a}
-      \strng{authorfullhashraw}{6a435e55dc3c0c7f5eed1565d0da252a}
-      \strng{editorbibnamehash}{cb5ed8d97b771ca720462828d087c4fa}
-      \strng{editornamehash}{cb5ed8d97b771ca720462828d087c4fa}
-      \strng{editorfullhash}{cb5ed8d97b771ca720462828d087c4fa}
-      \strng{editorfullhashraw}{cb5ed8d97b771ca720462828d087c4fa}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Refinement types are a popular way to specify and reason about key program properties. In this paper, we introduce RTR, a new system that adds refinement types to Ruby. RTR is built on top of RDL, a Ruby type checker that provides basic type information for the verification process. RTR works by encoding its verification problems into Rosette, a solver-aided host language. RTR handles mixins through assume-guarantee reasoning and uses just-in-time verification for metaprogramming. We formalize RTR by showing a translation from a core, Ruby-like language with refinement types into Rosette. We apply RTR to check a range of functional correctness properties on six Ruby programs. We find that RTR can successfully verify key methods in these programs, taking only a few minutes to perform verification.}
-      \field{booktitle}{Verification, {{Model Checking}}, and {{Abstract Interpretation}}}
-      \field{isbn}{978-3-319-73721-8}
-      \field{langid}{english}
-      \field{title}{Refinement {{Types}} for {{Ruby}}}
-      \field{year}{2018}
-      \field{pages}{269\bibrangedash 290}
-      \range{pages}{22}
-      \verb{doi}
-      \verb 10.1007/978-3-319-73721-8_13
-      \endverb
-      \keyw{Dynamic Languages,Refinement Types,Rosette,Ruby}
-    \endentry
     \entry{lehmannFluxLiquidTypes2023}{article}{}{}
       \name{author}{4}{}{%
         {{hash=39ff2b6f5ee5f5fdba7398c80afe27fb}{%
@@ -607,6 +478,125 @@
       \verb{file}
       \verb /home/blazz1t/Zotero/storage/FC8CFE4N/Lehmann et al. - 2023 - Flux Liquid Types for Rust.pdf
       \endverb
+    \endentry
+    \entry{vazouLiquidHaskellExperienceRefinement2014}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=b78a377734a44faae5e925c1ce02ae42}{%
+           family={Vazou},
+           familyi={V\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0d9abd78b6d829df1944e988fd738c17}{%
+           family={Seidel},
+           familyi={S\bibinitperiod},
+           given={Eric\bibnamedelima L.},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=0b731274f4d045521bac73df419287ea}{%
+           family={Jhala},
+           familyi={J\bibinitperiod},
+           given={Ranjit},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{b25ddb162a4e5fe57adb7117e204df84}
+      \strng{fullhash}{9212bdfd8b0332d2901d381665717aa0}
+      \strng{fullhashraw}{9212bdfd8b0332d2901d381665717aa0}
+      \strng{bibnamehash}{9212bdfd8b0332d2901d381665717aa0}
+      \strng{authorbibnamehash}{9212bdfd8b0332d2901d381665717aa0}
+      \strng{authornamehash}{b25ddb162a4e5fe57adb7117e204df84}
+      \strng{authorfullhash}{9212bdfd8b0332d2901d381665717aa0}
+      \strng{authorfullhashraw}{9212bdfd8b0332d2901d381665717aa0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Haskell has many delightful features. Perhaps the one most beloved by its users is its type system that allows developers to specify and verify a variety of program properties at compile time. However, many properties, typically those that depend on relationships between program values are impossible, or at the very least, cumbersome to encode within the existing type system. Many such properties can be verified using a combination of Refinement Types and external SMT solvers. We describe the refinement type checker liquidHaskell, which we have used to specify and verify a variety of properties of over 10,000 lines of Haskell code from various popular libraries, including containers, hscolour, bytestring, text, vector-algorithms and xmonad. First, we present a high-level overview of liquidHaskell, through a tour of its features. Second, we present a qualitative discussion of the kinds of properties that can be checked -- ranging from generic application independent criteria like totality and termination, to application specific concerns like memory safety and data structure correctness invariants. Finally, we present a quantitative evaluation of the approach, with a view towards measuring the efficiency and programmer effort required for verification, and discuss the limitations of the approach.}
+      \field{booktitle}{Proceedings of the 2014 {{ACM SIGPLAN}} Symposium on {{Haskell}}}
+      \field{isbn}{978-1-4503-3041-1}
+      \field{month}{9}
+      \field{series}{Haskell '14}
+      \field{shorttitle}{{{LiquidHaskell}}}
+      \field{title}{{{LiquidHaskell}}: Experience with Refinement Types in the Real World}
+      \field{urlday}{4}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \field{pages}{39\bibrangedash 51}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1145/2633357.2633366
+      \endverb
+    \endentry
+    \entry{kazerounianRefinementTypesRuby2017}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=8e6beaad8fee1cba706a86b985857aeb}{%
+           family={Kazerounian},
+           familyi={K\bibinitperiod},
+           given={Milod},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b78a377734a44faae5e925c1ce02ae42}{%
+           family={Vazou},
+           familyi={V\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=dfb060b6ad2b33198a646c908da68c33}{%
+           family={Bourgerie},
+           familyi={B\bibinitperiod},
+           given={Austin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=55173464701b5010f40690c34f4477ef}{%
+           family={Foster},
+           familyi={F\bibinitperiod},
+           given={Jeffrey\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=891b5b8af87210ad697663a0f5e1e379}{%
+           family={Torlak},
+           familyi={T\bibinitperiod},
+           given={Emina},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{f13974229978f1657c7ee63db8fa442f}
+      \strng{fullhash}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{fullhashraw}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{bibnamehash}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{authorbibnamehash}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{authornamehash}{f13974229978f1657c7ee63db8fa442f}
+      \strng{authorfullhash}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{authorfullhashraw}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Refinement types are a popular way to specify and reason about key program properties. In this paper, we introduce RTR, a new system that adds refinement types to Ruby. RTR is built on top of RDL, a Ruby type checker that provides basic type information for the verification process. RTR works by encoding its verification problems into Rosette, a solver-aided host language. RTR handles mixins through assume-guarantee reasoning and uses just-in-time verification for metaprogramming. We formalize RTR by showing a translation from a core, Ruby-like language with refinement types into Rosette. We apply RTR to check a range of functional correctness properties on six Ruby programs. We find that RTR can successfully verify key methods in these programs, taking only a few minutes to perform verification.}
+      \field{eprintclass}{cs.PL}
+      \field{eprinttype}{arXiv}
+      \field{month}{11}
+      \field{number}{arXiv:1711.09281}
+      \field{title}{Refinement {{Types}} for {{Ruby}}}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1711.09281
+      \endverb
+      \verb{eprint}
+      \verb 1711.09281
+      \endverb
+      \verb{file}
+      \verb /home/blazz1t/Zotero/storage/P56Q47J3/Kazerounian et al. - 2017 - Refinement Types for Ruby.pdf;/home/blazz1t/Zotero/storage/M8ISJT3N/1711.html
+      \endverb
+      \keyw{Computer Science - Programming Languages}
     \endentry
     \entry{barrettChapter33Satisfiability2021}{incollection}{}{}
       \name{author}{4}{}{%
@@ -689,6 +679,202 @@
       \endverb
       \verb{file}
       \verb /home/blazz1t/Zotero/storage/2JAI4BU5/Barrett et al. - 2021 - Chapter 33. Satisfiability Modulo Theories.pdf
+      \endverb
+    \endentry
+    \entry{barbosaCvc5VersatileIndustrialStrength2022}{incollection}{}{}
+      \name{author}{16}{}{%
+        {{hash=c01894907156dd00c952da8d346ec778}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={Haniel},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f519b0ade21460e17b744091e47a6c39}{%
+           family={Barrett},
+           familyi={B\bibinitperiod},
+           given={Clark},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8d46adab2c11772140fb38f3bc4accf4}{%
+           family={Brain},
+           familyi={B\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=baf659b2e9bb3c9a14e15285647a3af8}{%
+           family={Kremer},
+           familyi={K\bibinitperiod},
+           given={Gereon},
+           giveni={G\bibinitperiod}}}%
+        {{hash=6a11b637809a87578a448362007ca923}{%
+           family={Lachnitt},
+           familyi={L\bibinitperiod},
+           given={Hanna},
+           giveni={H\bibinitperiod}}}%
+        {{hash=cee9ecc4ac2e0578526fc06cf65a2383}{%
+           family={Mann},
+           familyi={M\bibinitperiod},
+           given={Makai},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a1f03eff1e89fedaef867ce4870b196f}{%
+           family={Mohamed},
+           familyi={M\bibinitperiod},
+           given={Abdalrhman},
+           giveni={A\bibinitperiod}}}%
+        {{hash=127e4bfaec95dd2d03c527d2d6ba4494}{%
+           family={Mohamed},
+           familyi={M\bibinitperiod},
+           given={Mudathir},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3aaef7a40e29dbbd5ab37234a980597d}{%
+           family={Niemetz},
+           familyi={N\bibinitperiod},
+           given={Aina},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ad06a0afc13a630a9fd66ac8cb44667b}{%
+           family={Nötzli},
+           familyi={N\bibinitperiod},
+           given={Andres},
+           giveni={A\bibinitperiod}}}%
+        {{hash=719c921bde7ad3a9eec82318e029aa35}{%
+           family={Ozdemir},
+           familyi={O\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=700b57aa0e2da705825692dd875a0dad}{%
+           family={Preiner},
+           familyi={P\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8d8e9896a00fbeb3d851b46aef4f012b}{%
+           family={Reynolds},
+           familyi={R\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b99fbe22103d2d6f803495267ee1cac9}{%
+           family={Sheng},
+           familyi={S\bibinitperiod},
+           given={Ying},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=17736d07fc9708df7a9802ea0d682814}{%
+           family={Tinelli},
+           familyi={T\bibinitperiod},
+           given={Cesare},
+           giveni={C\bibinitperiod}}}%
+        {{hash=480b72d1ad273becde4a705c1cb66cc2}{%
+           family={Zohar},
+           familyi={Z\bibinitperiod},
+           given={Yoni},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=ccc695ff0ad1ab271c4cb2c6c7178646}{%
+           family={Fisman},
+           familyi={F\bibinitperiod},
+           given={Dana},
+           giveni={D\bibinitperiod}}}%
+        {{hash=7fd7dca72da93b22748f135e2191a0fa}{%
+           family={Rosu},
+           familyi={R\bibinitperiod},
+           given={Grigore},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{63134dd8785e056d7a704e91b59ef02e}
+      \strng{fullhash}{78bb5702991ca0d8cccc33297cc1aaf9}
+      \strng{fullhashraw}{78bb5702991ca0d8cccc33297cc1aaf9}
+      \strng{bibnamehash}{63134dd8785e056d7a704e91b59ef02e}
+      \strng{authorbibnamehash}{63134dd8785e056d7a704e91b59ef02e}
+      \strng{authornamehash}{63134dd8785e056d7a704e91b59ef02e}
+      \strng{authorfullhash}{78bb5702991ca0d8cccc33297cc1aaf9}
+      \strng{authorfullhashraw}{78bb5702991ca0d8cccc33297cc1aaf9}
+      \strng{editorbibnamehash}{15eaf245a62dd5d0d1d4657945c3e54a}
+      \strng{editornamehash}{15eaf245a62dd5d0d1d4657945c3e54a}
+      \strng{editorfullhash}{15eaf245a62dd5d0d1d4657945c3e54a}
+      \strng{editorfullhashraw}{15eaf245a62dd5d0d1d4657945c3e54a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Abstract cvc5 is the latest SMT solver in the cooperating validity checker series and builds on the successful code base of CVC4. This paper serves as a comprehensive system description of cvc5 's architectural design and highlights the major features and components introduced since CVC4 ~1.8. We evaluate cvc5 's performance on all benchmarks in SMT-LIB and provide a comparison against CVC4 and Z3.}
+      \field{booktitle}{Tools and {{Algorithms}} for the {{Construction}} and {{Analysis}} of {{Systems}}}
+      \field{isbn}{978-3-030-99523-2 978-3-030-99524-9}
+      \field{langid}{english}
+      \field{series}{Lecture {{Notes}} in {{Computer Science}}}
+      \field{shorttitle}{Cvc5}
+      \field{title}{Cvc5: {{A Versatile}} and {{Industrial-Strength SMT Solver}}}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{volume}{13243}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{415\bibrangedash 442}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1007/978-3-030-99524-9_24
+      \endverb
+      \verb{file}
+      \verb /home/blazz1t/Zotero/storage/KJ3J9TKU/Barbosa et al. - 2022 - cvc5 A Versatile and Industrial-Strength SMT Solver.pdf
+      \endverb
+    \endentry
+    \entry{dutertreYices222014}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=0908582acb17105e7b66314c508d1376}{%
+           family={Dutertre},
+           familyi={D\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=22081d00e30965a89f413e528510617e}{%
+           family={Biere},
+           familyi={B\bibinitperiod},
+           given={Armin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9865af1b742410e6dee8ca813e1ec733}{%
+           family={Bloem},
+           familyi={B\bibinitperiod},
+           given={Roderick},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{0908582acb17105e7b66314c508d1376}
+      \strng{fullhash}{0908582acb17105e7b66314c508d1376}
+      \strng{fullhashraw}{0908582acb17105e7b66314c508d1376}
+      \strng{bibnamehash}{0908582acb17105e7b66314c508d1376}
+      \strng{authorbibnamehash}{0908582acb17105e7b66314c508d1376}
+      \strng{authornamehash}{0908582acb17105e7b66314c508d1376}
+      \strng{authorfullhash}{0908582acb17105e7b66314c508d1376}
+      \strng{authorfullhashraw}{0908582acb17105e7b66314c508d1376}
+      \strng{editorbibnamehash}{59cf8d18520d1b03e8e55b4a50cde2cb}
+      \strng{editornamehash}{59cf8d18520d1b03e8e55b4a50cde2cb}
+      \strng{editorfullhash}{59cf8d18520d1b03e8e55b4a50cde2cb}
+      \strng{editorfullhashraw}{59cf8d18520d1b03e8e55b4a50cde2cb}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Yices is an SMT solver developed by SRI International. The first version of Yices was released in 2006 and has been continuously updated since then. In 2007, we started a complete re-implementation of the solver to improve performance and increase modularity and flexibility. We describe the latest release of Yices, namely, Yices 2.2. We present the tool's architecture and discuss the algorithms it implements, and we describe recent developments such as support for the SMT-LIB~2.0 notation and various performance improvements.}
+      \field{booktitle}{Computer {{Aided Verification}}}
+      \field{isbn}{978-3-319-08867-9}
+      \field{langid}{english}
+      \field{title}{Yices~2.2}
+      \field{year}{2014}
+      \field{pages}{737\bibrangedash 744}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1007/978-3-319-08867-9_49
+      \endverb
+      \verb{file}
+      \verb /home/blazz1t/Zotero/storage/5MDRS3RH/Dutertre - 2014 - Yices 2.2.pdf
       \endverb
     \endentry
   \enddatalist
