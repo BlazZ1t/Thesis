@@ -2,9 +2,16 @@
 
 \usepackage{tempora} % Times New Roman alike font  
 
-\usepackage{vmargin}
-\setpapersize{A4}
-\setmarginsrb{2.5cm}{2.2cm}{2.2cm}{2.2cm}{0pt}{10mm}{0pt}{13mm}
+\usepackage[
+  a4paper,
+  left=2.5cm,
+  right=2.2cm,
+  top=2.2cm,
+  bottom=2.2cm,
+  headsep=10mm,
+  footskip=13mm,
+]{geometry}
+
 \usepackage{setspace}
 \setstretch{1.5}
 \usepackage{indentfirst}
@@ -21,6 +28,9 @@
 
 \usepackage{listings}
 \usepackage{xcolor}
+
+\usepackage{xurl}
+\usepackage{hyperref}
 
 % Define Dart language properties
 \lstdefinelanguage{Dart}{
@@ -176,7 +186,7 @@
 
 
 \include{chapters/abstract}
-\setcounter{page}{7}
+\setcounter{page}{8}
 % set manually the number, from which Chapter 1 starts!
 % Why do we put 7 in this case?
 % Title page - page 1
@@ -196,7 +206,13 @@
 
 
 %% REFERENCES
-\nocite{*}
+% \nocite{*}
+\setlength{\emergencystretch}{3em}
+\Urlmuskip=0mu plus 1mu\relax
+
+\begingroup
+\sloppy
 \printbibliography[heading=bibintoc,title={Bibliography cited}]
-\include{chapters/appex}
+\endgroup
+% \include{chapters/appex}
 \end{document}

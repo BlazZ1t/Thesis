@@ -8,19 +8,16 @@ Refinement types allow the developer to extend a language's type system
 with predicates \cite{jhalaRefinementTypesTutorial2020}. For example, the user can constraint
 the regular integer type with the following refinement 
 to get the type that represents only natural numbers.
-
 \begin{lstlisting}
     @Refinement(identifier: 'x', predicate: 'x >= 0')
     typedef nat = int;
 \end{lstlisting}
-
 With such refinements the developer can easily avoid index out of bounds errors by, for example,
 defining the following refinement:
 \begin{lstlisting}
     @Refinement(parameters: ['list', 'index'], predicate: 'index <= length(list)')
     T get(List<T> list, int index) => list[index];
 \end{lstlisting}
-
 The type checker will ensure that the index provided to the function is smaller than the
 length of the list, and if not, will report this operation as unsafe.
 
@@ -41,7 +38,6 @@ Assume a function \textit{safeHead}, where we want to check safety of \textit{xs
 \begin{lstlisting}
     int safeHead(List<int> xs) => xs.length > 0 ? xs[0] : 0;
 \end{lstlisting}
-
 Without type inference we would need to manually specify length property of \textit{xs}
 as a refinement, however liquid types can infer the constraint from the program itself. 
 
@@ -51,21 +47,16 @@ Similar implementations exist for other programming languages. The most similar 
 a refinement type system for TypeScript \cite{vekrisRefinementTypesTypeScript2016} by \textit{Vekris et al}.
 Their work demonstrates an integration of a refinement type system into an imperative object-oriented language while
 retaining support for higher-order functions.
-\\
-
-One of the main problems the implementation faces is treatment of mutable variables.
+\\One of the main problems the implementation faces is treatment of mutable variables.
 Since the value of a variable can change during program execution, refinement predicates can become
 invalid after reassignment. To address the issue the authors translate input programs into Static Single Assignment form,
 where each variable is assigned only once. This allows their checker to reason about individual variable versions and retain
 the information about conditions under which they were assigned.
-\\
-
-The implementation also uses the Liquid Types \cite{rondonLiquidTypes2008} system which, on par with TypeScript 
+\\The implementation also uses the Liquid Types \cite{rondonLiquidTypes2008} system which, on par with TypeScript 
 being similar to Dart on many accounts \cite{DartlangLanguage2026}, makes this implementation
 a good reference point for my project.
-\\
-Other notable examples of such system implementations are \cite[Liquid Haskell]{vazouLiquidHaskellExperienceRefinement2014}, \cite[Refinement Types For Ruby]{kazerounian_refinement_2018}
-, and \cite[Flux: Liquid Types for Rust]{lehmannFluxLiquidTypes2023}
+\\Other notable examples of such system implementations are \cite[Liquid Haskell]{vazouLiquidHaskellExperienceRefinement2014}, 
+\cite[Refinement Types For Ruby]{kazerounianRefinementTypesRuby2018}, and \cite[Flux: Liquid Types for Rust]{lehmannFluxLiquidTypes2023}
 
 \section{SMT Solvers and Z3}
 \label{sec:smt_solvers}

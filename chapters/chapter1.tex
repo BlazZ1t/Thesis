@@ -8,12 +8,12 @@ Index out of bounds errors are a well known reason for critical bugs appearing
 in modern software, mainly occurring in places where the checks for proper indexing 
 are either insufficient or lacking entirely. The most notable example of these errors
 is access to an element of array that doesn't exist at the index provided.
-\\
+
 Since a lot of programming languages rely on the array as a commonly used data structure,
 it is easy to encounter such an error in any part of the developed software.
 The examples include but are not limited to color conversions \cite{bazinacRangeErrorIndexIndex2021} \cite{ChangelogWidgetrecodingpluginVersion},
 pixel values \cite{volginIndexOutBounds2018} or handling of empty lists \cite{ngotruongthanhSyncfusion_flutter_datagridErrorRangeError2024}.
-\\
+
 Unfortunately, due to the nature of how array accesses happen, these errors are quite difficult to notice until they reach 
 runtime or sometimes even production environments completely unnoticed.
 
@@ -23,9 +23,33 @@ runtime or sometimes even production environments completely unnoticed.
 Dart programming language is prone to index out of bounds errors. The current type system, 
 though increasing robustness \cite{DartlangLanguage2026}, does not currently support  
 collection-length constraints. This makes developers rely on assumptions and runtime testing.
-\\
+
 This thesis attempts to resolve this issue by introducing a refinement type system to statically
 confirm safety of array access operations while adding little annotation burden to the developers.
+
+To evaluate the practical applicability of the proposed
+approach, the implementation will be tested on a corpus
+of publicly available Dart packages obtained from \href{pub.dev}{pub.dev} (Dart package store).
+This evaluation will investigate how effectively the
+proposed refinement type system can verify list indexing
+operations in existing software projects.
+
+\section{Research Hypothesis}
+\label{sec:research_hypothesis}
+This thesis hypothesises that the introduction of refinement types into the
+Dart static analysis workflow will improve safety of list indexing operations, compared
+to the standard Dart analyzer, while maintaining a reasonable annotation burden and 
+analysis overhead.\\The hypothesis will be evaluated using the following critera:
+
+\begin{itemize}
+    \item At least $X\%$ of list indexing operations in the selected package corpus will have their safety
+    verified by the proposed implementation
+    \item The annotation burden will not exceed $Y$ refinement annotations per list indexing operation
+    \item The additional analysis time will not exceed $Z\%$ of the baseline analysis time
+\end{itemize}
+An indexing operation will be considered either proven safe, proven unsafe or unverifiable.
+An unverifiable operation doesn't necessarily repersent a runtime error, but rather a case
+where it is impossible to statically determine safety of this operation with all information available.
 
 \section{Objectives}
 \label{sec:objectives}
@@ -39,13 +63,101 @@ We aim to achieve the following goals:
 
 \section{Limitations \& Scope}
 \label{sec:limitations_and_scope}
-The implementation will cover the following features of Dart and will allow users to write the following refinements:
+The implementation will cover the following subset of Dart programming language and will allow users to write the following refinements:
 \begin{itemize}
     \item Refinement type definitions that will allow users to extend integers, booleans and lists with refinements
     \item Definition of variables with refinement types
     \item Definition of recursive/non-recursive functions
     \item Usage of $length(xs)$ function in refinements for List type and its refinement extensions
 \end{itemize}
+
+\section{Dart Analyzer Capabilities (Baseline)}
+\label{sec:dart_baseline}
+The Dart analyzer already provides a number of static analysis features, including but
+not limited to type checking, type inference, null safety and control flow analysis \cite{DartlangLanguage2026}.
+These features allow the analyzer to identify and report numerous programming errors before runtime.
+
+However, the existing type system doesn't generally express or verify relationships
+between collection lengths and their indecies.
+
+For example, given a list \texttt{xs} and an integer index value \texttt{index}, the analyzer
+can confirm that the expression \texttt{xs[index]} is safe. However it cannot verify that
+the following holds:
+\[
+0 \leq i < \texttt{xs.length}
+\]
+As a result, an expression that is valid per static analysis will throw \texttt{RangeError}
+at runtime.
+
+The proposed implementation aims to extend these existing
+capabilities by introducing refinement types and constraint
+solving, allowing collection length and indexing operations properties
+to be verified statically
+
+\section{Evaluation Criteria}
+\label{sec:evaluation_critera}
+The implementation will be evaluated using three primary metrics:
+\begin{itemize}
+    \item \textbf{Verification rate:} The proportion of eligble list indexing operations
+    whose safety is successfully verified by the checker
+    \item \textbf{Annotation burden:} The ratio between the number of refinement annotations
+    added and the total number of eligble list indexing operations
+    \item \textbf{Analysis overhead:} The relative increase in analysis time when using
+    the proposed implementation, compared to the standard Dart analyzer
+\end{itemize}
+The following thresholds will be used to evaluate the hypothesis:
+\begin{itemize}
+    \item Verification rate of at least X\%
+    \item Annotation burden no bigger than Y
+    \item Analysis overhead not exceeding Z\% of the baseline analysis time
+\end{itemize}
+
+Additionaly, the number of indexing operations proven unsafe/unverifiable will be recorded
+to provide more insights onto the effectivness and limitations of the implementation
+
+\section{Evaluation Methodology}
+\label{sec:evaluation_methodology}
+The effectivness of the implementation will be evaluated using the corpus of packages 
+from Dart package store \href{pub.dev}{pub.dev}.
+
+\subsection{Corpus Selection}
+The initial corpus will consist of 30 packages, selected from the 100 most popular packages
+on pub.dev at the time of corpus construction.
+
+Packages will be selected randomly and must satisfy the following conditions:
+\begin{itemize}
+    \item The package must have a stable release.
+    \item The package must be compatible with the Dart SDK version used in the experiment.
+    \item The package must provide Dart source code.
+    \item The package must contain at least one list indexing in its production source code. 
+\end{itemize}
+The analysis will focus on production source files, located in \texttt{lib/} directory.
+Generated sources will be excluded.
+
+\subsection{Baseline Analysis}
+Each selected package will first be analyzed with standard Dart analyzer without
+the proposed refinement checker.
+
+We will record the diagnostics produced by the analyzer, analysis time 
+and the number of eligble indexing operations.
+
+This experiment establishes capabilities of the existing Dart analysis workflows and 
+provides a baseline for evaluating verification capabilities of the proposed implementation.
+
+\subsection{Extended Analysis}
+The same packages will be analyzed using the proposed type checker, with necessary 
+refinement annotations added.
+
+For each of the eligble indexing operations, the implementation will record the following:
+\begin{itemize}
+    \item Proven safe.
+    \item Proven unsafe.
+    \item Unverifiable.
+\end{itemize}
+The number of introduced annotations and analysis time will also be recorded.\\
+The results will be compared against the baseline analysis using 
+evaluation criteria defined in \ref{sec:evaluation_critera}
+
 
 % \section{Spacing \& Type}
 % \label{sec:section}

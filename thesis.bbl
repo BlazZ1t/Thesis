@@ -191,8 +191,8 @@
       \strng{authornamehash}{b9c0f80a4f9a67c95b62b4754e789157}
       \strng{authorfullhash}{b9c0f80a4f9a67c95b62b4754e789157}
       \strng{authorfullhashraw}{b9c0f80a4f9a67c95b62b4754e789157}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Refinement types enrich a language's type system with logical predicates that circumscribe the set of values described by the type, thereby providing software developers a tunable knob with which to inform the type system about what invariants and correctness properties should be checked on their code. In this article, we distill the ideas developed in the substantial literature on refinement types into a unified tutorial that explains the key ingredients of modern refinement type systems. In particular, we show how to implement a refinement type checker via a progression of languages that incrementally add features to the language or type system.}
@@ -251,8 +251,8 @@
       \strng{authornamehash}{11bb484824c1675e527bc5b740b2f85e}
       \strng{authorfullhash}{0b0fce80d4545d5465042c56fce06a51}
       \strng{authorfullhashraw}{0b0fce80d4545d5465042c56fce06a51}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We present Logically Qualified Data Types, abbreviated to Liquid Types, a system that combines Hindley-Milner type inference with Predicate Abstraction to automatically infer dependent types precise enough to prove a variety of safety properties. Liquid types allow programmers to reap many of the benefits of dependent types, namely static verification of critical properties and the elimination of expensive run-time checks, without the heavy price of manual annotation. We have implemented liquid type inference in DSOLVE, which takes as input an OCAML program and a set of logical qualifiers and infers dependent types for the expressions in the OCAML program. To demonstrate the utility of our approach, we describe experiments using DSOLVE to statically verify the safety of array accesses on a set of OCAML benchmarks that were previously annotated with dependent types as part of the DML project. We show that when used in conjunction with a fixed set of array bounds checking qualifiers, DSOLVE reduces the amount of manual annotation required for proving safety from 31\% of program text to under 1\%.}
@@ -296,8 +296,8 @@
       \strng{authornamehash}{5b1fb1b07370df4e050d0715c1cac42a}
       \strng{authorfullhash}{5b1fb1b07370df4e050d0715c1cac42a}
       \strng{authorfullhashraw}{5b1fb1b07370df4e050d0715c1cac42a}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -477,6 +477,81 @@
       \verb 10.1145/2633357.2633366
       \endverb
     \endentry
+    \entry{kazerounianRefinementTypesRuby2018}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=8e6beaad8fee1cba706a86b985857aeb}{%
+           family={Kazerounian},
+           familyi={K\bibinitperiod},
+           given={Milod},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b78a377734a44faae5e925c1ce02ae42}{%
+           family={Vazou},
+           familyi={V\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=dfb060b6ad2b33198a646c908da68c33}{%
+           family={Bourgerie},
+           familyi={B\bibinitperiod},
+           given={Austin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=55173464701b5010f40690c34f4477ef}{%
+           family={Foster},
+           familyi={F\bibinitperiod},
+           given={Jeffrey\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=891b5b8af87210ad697663a0f5e1e379}{%
+           family={Torlak},
+           familyi={T\bibinitperiod},
+           given={Emina},
+           giveni={E\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=fd8f081bfdff32c5bab11f6680b91459}{%
+           family={Dillig},
+           familyi={D\bibinitperiod},
+           given={Isil},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1684412f847ca2768dd69ca981ed8458}{%
+           family={Palsberg},
+           familyi={P\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{f13974229978f1657c7ee63db8fa442f}
+      \strng{fullhash}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{fullhashraw}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{bibnamehash}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{authorbibnamehash}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{authornamehash}{f13974229978f1657c7ee63db8fa442f}
+      \strng{authorfullhash}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{authorfullhashraw}{6a435e55dc3c0c7f5eed1565d0da252a}
+      \strng{editorbibnamehash}{cb5ed8d97b771ca720462828d087c4fa}
+      \strng{editornamehash}{cb5ed8d97b771ca720462828d087c4fa}
+      \strng{editorfullhash}{cb5ed8d97b771ca720462828d087c4fa}
+      \strng{editorfullhashraw}{cb5ed8d97b771ca720462828d087c4fa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Refinement types are a popular way to specify and reason about key program properties. In this paper, we introduce RTR, a new system that adds refinement types to Ruby. RTR is built on top of RDL, a Ruby type checker that provides basic type information for the verification process. RTR works by encoding its verification problems into Rosette, a solver-aided host language. RTR handles mixins through assume-guarantee reasoning and uses just-in-time verification for metaprogramming. We formalize RTR by showing a translation from a core, Ruby-like language with refinement types into Rosette. We apply RTR to check a range of functional correctness properties on six Ruby programs. We find that RTR can successfully verify key methods in these programs, taking only a few minutes to perform verification.}
+      \field{booktitle}{Verification, {{Model Checking}}, and {{Abstract Interpretation}}}
+      \field{isbn}{978-3-319-73721-8}
+      \field{langid}{english}
+      \field{title}{Refinement {{Types}} for {{Ruby}}}
+      \field{year}{2018}
+      \field{pages}{269\bibrangedash 290}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/978-3-319-73721-8_13
+      \endverb
+      \keyw{Dynamic Languages,Refinement Types,Rosette,Ruby}
+    \endentry
     \entry{lehmannFluxLiquidTypes2023}{article}{}{}
       \name{author}{4}{}{%
         {{hash=39ff2b6f5ee5f5fdba7398c80afe27fb}{%
@@ -615,197 +690,6 @@
       \verb{file}
       \verb /home/blazz1t/Zotero/storage/2JAI4BU5/Barrett et al. - 2021 - Chapter 33. Satisfiability Modulo Theories.pdf
       \endverb
-    \endentry
-    \entry{DocumentationNanopassFramework}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://nanopass.org/documentation.html}
-      \field{title}{Documentation - {{Nanopass Framework}}}
-      \field{urlday}{12}
-      \field{urlmonth}{10}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{file}
-      \verb /home/blazz1t/Zotero/storage/FE6G6UQJ/documentation.html
-      \endverb
-    \endentry
-    \entry{dunfieldBidirectionalTyping2021}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=60889da679127853753f4585e316703b}{%
-           family={Dunfield},
-           familyi={D\bibinitperiod},
-           given={Jana},
-           giveni={J\bibinitperiod}}}%
-        {{hash=0db8fd853ecaf02ae0100d840b9302a3}{%
-           family={Krishnaswami},
-           familyi={K\bibinitperiod},
-           given={Neel},
-           giveni={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{f161efb86a0a4b5f891db095bdc39adb}
-      \strng{fullhash}{f161efb86a0a4b5f891db095bdc39adb}
-      \strng{fullhashraw}{f161efb86a0a4b5f891db095bdc39adb}
-      \strng{bibnamehash}{f161efb86a0a4b5f891db095bdc39adb}
-      \strng{authorbibnamehash}{f161efb86a0a4b5f891db095bdc39adb}
-      \strng{authornamehash}{f161efb86a0a4b5f891db095bdc39adb}
-      \strng{authorfullhash}{f161efb86a0a4b5f891db095bdc39adb}
-      \strng{authorfullhashraw}{f161efb86a0a4b5f891db095bdc39adb}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Bidirectional typing combines two modes of typing: type checking, which checks that a program satisfies a known type, and type synthesis, which determines a type from the program. Using checking enables bidirectional typing to support features for which inference is undecidable; using synthesis enables bidirectional typing to avoid the large annotation burden of explicitly typed languages. In addition, bidirectional typing improves error locality. We highlight the design principles that underlie bidirectional type systems, survey the development of bidirectional typing from the prehistoric period before Pierce and Turner's local type inference to the present day, and provide guidance for future investigations.}
-      \field{issn}{0360-0300}
-      \field{journaltitle}{ACM Computing Surveys (CSUR)}
-      \field{month}{5}
-      \field{number}{5}
-      \field{title}{Bidirectional {{Typing}}}
-      \field{urlday}{28}
-      \field{urlmonth}{9}
-      \field{urlyear}{2026}
-      \field{volume}{54}
-      \field{year}{2021}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \field{pages}{98:1\bibrangedash 98:38}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb 10.1145/3450952
-      \endverb
-      \verb{file}
-      \verb /home/blazz1t/Zotero/storage/3QMUAAW2/Dunfield and Krishnaswami - 2021 - Bidirectional Typing.pdf
-      \endverb
-    \endentry
-    \entry{gamboaUsabilityBarriersLiquid2025}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=314ffdca4914ad47cf5c02a4e3ed71e4}{%
-           family={Gamboa},
-           familyi={G\bibinitperiod},
-           given={Catarina},
-           giveni={C\bibinitperiod}}}%
-        {{hash=d4fc8dd451325c5fbe51db15e632b1c6}{%
-           family={Reese},
-           familyi={R\bibinitperiod},
-           given={Abigail},
-           giveni={A\bibinitperiod}}}%
-        {{hash=a5756c022a26a33c9c81cc1197da62eb}{%
-           family={Fonseca},
-           familyi={F\bibinitperiod},
-           given={Alcides},
-           giveni={A\bibinitperiod}}}%
-        {{hash=0d07eaf3b5b1e4de2605019d4f388fae}{%
-           family={Aldrich},
-           familyi={A\bibinitperiod},
-           given={Jonathan},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{4edd1a71e8fc2df3b5129454460ea773}
-      \strng{fullhash}{e9852516b71f84c491664d53425797e7}
-      \strng{fullhashraw}{e9852516b71f84c491664d53425797e7}
-      \strng{bibnamehash}{e9852516b71f84c491664d53425797e7}
-      \strng{authorbibnamehash}{e9852516b71f84c491664d53425797e7}
-      \strng{authornamehash}{4edd1a71e8fc2df3b5129454460ea773}
-      \strng{authorfullhash}{e9852516b71f84c491664d53425797e7}
-      \strng{authorfullhashraw}{e9852516b71f84c491664d53425797e7}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Liquid types can express richer verification properties than simple type systems. However, despite their advantages, liquid types have yet to achieve widespread adoption. To understand why, we conducted a study analyzing developers' challenges with liquid types, focusing on LiquidHaskell. Our findings reveal nine key barriers that span three categories, including developer experience, scalability challenges with complex and large codebases, and understanding the verification process. Together, these obstacles provide a comprehensive view of the usability challenges to the broader adoption of liquid types and offer insights that can inform the current and future design and implementation of liquid type systems.}
-      \field{journaltitle}{Proc. ACM Program. Lang.}
-      \field{month}{6}
-      \field{number}{PLDI}
-      \field{title}{Usability {{Barriers}} for {{Liquid Types}}}
-      \field{urlday}{4}
-      \field{urlmonth}{10}
-      \field{urlyear}{2026}
-      \field{volume}{9}
-      \field{year}{2025}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \field{pages}{224:1911\bibrangedash 224:1936}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb 10.1145/3729327
-      \endverb
-    \endentry
-    \entry{kazerounianRefinementTypesRuby2018}{inproceedings}{}{}
-      \name{author}{5}{}{%
-        {{hash=8e6beaad8fee1cba706a86b985857aeb}{%
-           family={Kazerounian},
-           familyi={K\bibinitperiod},
-           given={Milod},
-           giveni={M\bibinitperiod}}}%
-        {{hash=b78a377734a44faae5e925c1ce02ae42}{%
-           family={Vazou},
-           familyi={V\bibinitperiod},
-           given={Niki},
-           giveni={N\bibinitperiod}}}%
-        {{hash=dfb060b6ad2b33198a646c908da68c33}{%
-           family={Bourgerie},
-           familyi={B\bibinitperiod},
-           given={Austin},
-           giveni={A\bibinitperiod}}}%
-        {{hash=55173464701b5010f40690c34f4477ef}{%
-           family={Foster},
-           familyi={F\bibinitperiod},
-           given={Jeffrey\bibnamedelima S.},
-           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=891b5b8af87210ad697663a0f5e1e379}{%
-           family={Torlak},
-           familyi={T\bibinitperiod},
-           given={Emina},
-           giveni={E\bibinitperiod}}}%
-      }
-      \name{editor}{2}{}{%
-        {{hash=fd8f081bfdff32c5bab11f6680b91459}{%
-           family={Dillig},
-           familyi={D\bibinitperiod},
-           given={Isil},
-           giveni={I\bibinitperiod}}}%
-        {{hash=1684412f847ca2768dd69ca981ed8458}{%
-           family={Palsberg},
-           familyi={P\bibinitperiod},
-           given={Jens},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Cham}%
-      }
-      \list{publisher}{1}{%
-        {Springer International Publishing}%
-      }
-      \strng{namehash}{f13974229978f1657c7ee63db8fa442f}
-      \strng{fullhash}{6a435e55dc3c0c7f5eed1565d0da252a}
-      \strng{fullhashraw}{6a435e55dc3c0c7f5eed1565d0da252a}
-      \strng{bibnamehash}{6a435e55dc3c0c7f5eed1565d0da252a}
-      \strng{authorbibnamehash}{6a435e55dc3c0c7f5eed1565d0da252a}
-      \strng{authornamehash}{f13974229978f1657c7ee63db8fa442f}
-      \strng{authorfullhash}{6a435e55dc3c0c7f5eed1565d0da252a}
-      \strng{authorfullhashraw}{6a435e55dc3c0c7f5eed1565d0da252a}
-      \strng{editorbibnamehash}{cb5ed8d97b771ca720462828d087c4fa}
-      \strng{editornamehash}{cb5ed8d97b771ca720462828d087c4fa}
-      \strng{editorfullhash}{cb5ed8d97b771ca720462828d087c4fa}
-      \strng{editorfullhashraw}{cb5ed8d97b771ca720462828d087c4fa}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Refinement types are a popular way to specify and reason about key program properties. In this paper, we introduce RTR, a new system that adds refinement types to Ruby. RTR is built on top of RDL, a Ruby type checker that provides basic type information for the verification process. RTR works by encoding its verification problems into Rosette, a solver-aided host language. RTR handles mixins through assume-guarantee reasoning and uses just-in-time verification for metaprogramming. We formalize RTR by showing a translation from a core, Ruby-like language with refinement types into Rosette. We apply RTR to check a range of functional correctness properties on six Ruby programs. We find that RTR can successfully verify key methods in these programs, taking only a few minutes to perform verification.}
-      \field{booktitle}{Verification, {{Model Checking}}, and {{Abstract Interpretation}}}
-      \field{isbn}{978-3-319-73721-8}
-      \field{langid}{english}
-      \field{title}{Refinement {{Types}} for {{Ruby}}}
-      \field{year}{2018}
-      \true{nocite}
-      \field{pages}{269\bibrangedash 290}
-      \range{pages}{22}
-      \verb{doi}
-      \verb 10.1007/978-3-319-73721-8_13
-      \endverb
-      \keyw{Dynamic Languages,Refinement Types,Rosette,Ruby}
     \endentry
   \enddatalist
 \endrefsection
