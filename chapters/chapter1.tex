@@ -5,14 +5,14 @@
 \label{sec:background_and_relevance}
 
 Index out of bounds errors are a well known reason for critical bugs appearing
-in modern software, mainly occuring in places where the checks for proper indexing 
+in modern software, mainly occurring in places where the checks for proper indexing 
 are either insufficient or lacking entirely. The most notable example of these errors
 is access to an element of array that doesn't exist at the index provided.
 \\
 Since a lot of programming languages rely on the array as a commonly used data structure,
 it is easy to encounter such an error in any part of the developed software.
-The examples include but are not limited to color conversions [need citation \href{https://github.com/flutter/flutter/issues/89584}{89584} \href{https://github.com/abdulhadinaeem/widget-recoding-plugin/blob/1.0.4/CHANGELOG.md}{changelog}],
-pixel values [need citation \href{https://github.com/fluttercommunity/flutter-draggable-scrollbar/issues/8}{8}] or handling of empty lists.
+The examples include but are not limited to color conversions \cite{bazinacRangeErrorIndexIndex2021} \cite{ChangelogWidgetrecodingpluginVersion},
+pixel values \cite{volginIndexOutBounds2018} or handling of empty lists \cite{ngotruongthanhSyncfusion_flutter_datagridErrorRangeError2024}.
 \\
 Unfortunately, due to the nature of how array accesses happen, these errors are quite difficult to notice until they reach 
 runtime or sometimes even production environments completely unnoticed.
@@ -21,10 +21,10 @@ runtime or sometimes even production environments completely unnoticed.
 \section{Problem Statement}
 \label{sec:problem_statement}
 Dart programming language is prone to index out of bounds errors. The current type system, 
-though incressing robustness [citation dart language specs], does not currently support  
+though increasing robustness \cite{DartlangLanguage2026}, does not currently support  
 collection-length constraints. This makes developers rely on assumptions and runtime testing.
 \\
-This paper attempts to resolve this issue by introducing a refinement type system to statically
+This thesis attempts to resolve this issue by introducing a refinement type system to statically
 confirm safety of array access operations while adding little annotation burden to the developers.
 
 \section{Objectives}
@@ -33,7 +33,7 @@ We aim to achieve the following goals:
 \begin{itemize}
     \item An implementation of an analyzer for a custom predicate language 
     \item An implementation of a refinement type checker and type inference algorithm with usage of Z3 constraints solver
-    \item Integration of said checker into Dart analysis workflow \cite{noauthor_analyzer_nodate}
+    \item Integration of said checker into Dart analysis workflow \cite{AnalyzerPlugins}
     \item Evaluation of the effectivness of the implementation on a package corpus from \href{pub.dev}{pub.dev}
 \end{itemize}
 
